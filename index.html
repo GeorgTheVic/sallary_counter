@@ -10,21 +10,25 @@
   <main class="counter__main">
     <h1 class="counter__title">Sallary counter</h1>
     <p class="counter__sign">How much lessons?</p>
-    <input class="counter__input" type="number">
+    <input class="counter__input" type="number" id="amount_lessons">
 
     <div class="coefficients">
       <div class="coefficients__card">
-        <p class="couner__sign">Конверсейшн</p>
-        <input type="checkbox">
+        <p class="couner__sign">Conversion</p>
+        <input type="checkbox" id="conversion">
       </div>
       <div class="coefficients__card">
         <p class="couner__sign">LTW</p>
-        <input type="checkbox">
+        <input id="ltw" type="checkbox">
       </div>
       <div class="coefficients__card">
         <p class="couner__sign">LPW</p>
-        <input type="checkbox">
+        <input id="lpw" type="checkbox">
       </div>
+
+      <p class="sallary">Dollars: <span id="usd"></span></p>
+      <p class="sallary">Tenge: <span id="tng"></span></p>
+      <p class="sallary">Rubls: <span id="rub"></span></p>
     </div>
   </main>
   <script src="assets/script.js"></script>
