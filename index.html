@@ -1,36 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My counter</title>
   <link rel="stylesheet" href="assets/style.css">
 </head>
+
 <body class="counter">
   <main class="counter__main">
-    <h1 class="counter__title">Sallary counter</h1>
-    <p class="counter__sign">How much lessons?</p>
-    <input class="counter__input" type="number" id="amount_lessons">
+    <div class="counter__inner">
+      <h1 class="counter__title">Sallary counter</h1>
+      <div class="counter__leessons">
+        <div class="counter__quantity">
+          <p class="couner__subtitle">How much lessons?</p>
+          <input class="counter__input" type="number" id="amount_lessons">
+        </div>
 
-    <div class="coefficients">
-      <div class="coefficients__card">
-        <p class="couner__sign">Conversion</p>
-        <input type="checkbox" id="conversion">
-      </div>
-      <div class="coefficients__card">
-        <p class="couner__sign">LTW</p>
-        <input id="ltw" type="checkbox">
-      </div>
-      <div class="coefficients__card">
-        <p class="couner__sign">LPW</p>
-        <input id="lpw" type="checkbox">
-      </div>
+        <div class="coefficients">
+          <div class="coefficients__card">
+            <p class="couner__sign">Conversion</p>
+            <input type="checkbox" id="conversion">
+          </div>
+          <div class="coefficients__card">
+            <p class="couner__sign">LTW</p>
+            <input id="ltw" type="checkbox">
+          </div>
+          <div class="coefficients__card">
+            <p class="couner__sign">LPW</p>
+            <input id="lpw" type="checkbox">
+          </div>
 
-      <p class="sallary">Dollars: <span id="usd"></span></p>
-      <p class="sallary">Tenge: <span id="tng"></span></p>
-      <p class="sallary">Rubls: <span id="rub"></span></p>
+          
+
+        </div>
+        
+      </div>
+      
+      <div class="currency">
+            <p class="sallary">Dollars: <span id="usd"></span></p>
+            <p class="sallary">Tenge: <span id="tng"></span></p>
+            <p class="sallary">Rubls: <span id="rub"></span></p>
+          </div>
     </div>
   </main>
   <script src="assets/script.js"></script>
 </body>
-</html> 
+
+</html>
