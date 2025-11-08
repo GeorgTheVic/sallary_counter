@@ -1,4 +1,27 @@
-document.addEventListener('DOMContentLoaded', function () {
+async function getExchangeRate() {
+    const apiKey = 'ecaff23e2224cd9dec67a511bafc9b56'
+    const url = `https://api.currencylayer.com/live?access_key=${apiKey}&currencies=KZT&source=USD&format=1`
+
+    try {
+        const response = await fetch(url)
+        const data = await response.json()
+
+        if (data.success) {
+            return data.quotes.USDKZT
+        } else {
+            console.log('Ошибка API:', data.error.info)
+            return 520
+        }
+    } catch (error) {
+        console.error('Ошибка сети:', error)
+        return 520
+    }
+}
+
+
+let tng_to_usd_rate = 520
+
+document.addEventListener('DOMContentLoaded', async function () {
 
     let conversion_value = 0,
         ltw_value = 0,
@@ -7,8 +30,13 @@ document.addEventListener('DOMContentLoaded', function () {
         rub_ltw_value = 0,
         rub_lpw_value = 0,
         usd_rate = 5.15,
-        tng_to_usd_rate = 540,
         rub_rate = 360
+
+    tng_to_usd_rate = await getExchangeRate()
+
+    console.log('Курс загружен', tng_to_usd_rate)
+
+
 
     const amount_lessons = document.querySelector('#amount_lessons'),
         usd = document.querySelector('#usd'),
